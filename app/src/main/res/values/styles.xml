@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Bear" parent="android:Theme.Material">
+        <item name="android:colorPrimary">@color/DarkOrchid</item>
+        <item name="android:colorPrimaryDark">@color/Navy</item>
+        <item name="android:colorAccent">@color/Thistle</item>
+        <item name="android:navigationBarColor">@color/Indigo</item>
+    </style>
+
+    <!-- Base application theme (Light). -->
+    <style name="Bear.Light" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/DarkOrchid</item>
+        <item name="android:colorPrimaryDark">@color/Navy</item>
+        <!--<item name="android:colorAccent">@color/Olive</item>-->
+        <item name="android:navigationBarColor">@color/Indigo</item>
+    <!-- <item name="android:navigationBarColor">@color/Indigo</item> -->
+    </style>
+
+
+    <style name="Gurkha" parent="android:Theme.Material">
+        <item name="android:colorPrimary">@color/Sienna</item>
+        <item name="android:colorPrimaryDark">@color/DarkKhaki</item>
+        <item name="android:colorAccent">@color/LightCoral</item>
+    </style>
+
+    <style name="Dialog" parent="android:Theme.Material.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/background_repeat_test</item>
+    </style>
+
+    <style name="Frame">
+        <item name="android:background">@drawable/round_corners</item>
+        <item name="android:textColor">@color/LemonChiffon</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">23sp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:text">\"Lernen, ohne zu denken, ist eitel; denken, ohne zu lernen, ist
+            gefährlich.\"
+        </item>
+    </style>
+
+    <!--<style name="SnippetStyle">-->
+    <!--<item name="android:textColor">@color/Black</item>-->
+    <!--</style>-->
+
+</resources>

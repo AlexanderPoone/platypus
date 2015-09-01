@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bottom 2dp Shadow -->
+    <item
+        android:left="5dp"
+        android:right="5dp"
+        android:top="10dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/DarkOliveGreen" />
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+
+    <!-- White Top color -->
+    <item
+        android:bottom="12dp"
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/OliveDrab" />
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+</layer-list>

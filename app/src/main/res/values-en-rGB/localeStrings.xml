@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="locale">Locale</string>
+    <string-array name="locale_native">
+        <item name="en_GB">English (United Kingdom)</item>
+        <item name="en_US">English (United States)</item>
+        <item name="ca">Català</item>
+        <item name="de_DE">Deutsch (Deutschland)</item>
+        <item name="el">Ελληνικά</item>
+        <item name="es_ES">Español (España)</item>
+        <item name="es_MX">Español (México)</item>
+        <item name="eo">Esperanto</item>
+        <item name="fr_FR">Français (France)</item>
+        <item name="hax0r">31337 h4x0r</item>
+        <item name="ja">日本語</item>
+        <item name="ua">Українська</item>
+        <item name="zh_HK">中文 (香港正體)</item>
+        <item name="zh_TW">中文 (臺灣正體)</item>
+    </string-array>
+    <string-array name="locale">
+        <item name="en_GB">English (United Kingdom)</item>
+        <item name="en_US">English (United States)</item>
+        <item name="ca">Catalan</item>
+        <item name="de_DE">German</item>
+        <item name="el">Greek</item>
+        <item name="es_ES">Spanish (Spain)</item>
+        <item name="es_MX">Spanish (Mexico)</item>
+        <item name="eo">Esperanto</item>
+        <item name="fr_FR">French (France)</item>
+        <item name="hax0r">Leetspeak</item>
+        <item name="ja">Japanese</item>
+        <item name="ua">Ukrainian</item>
+        <item name="zh_HK">Chinese (Standard, Hong Kong)</item>
+        <item name="zh_TW">Chinese (Standard, Taiwan)</item>
+    </string-array>
+</resources>

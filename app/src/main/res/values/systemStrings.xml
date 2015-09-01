@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font">Font</string>
+    <string name="charset">Charset: </string>
+    <string-array name="typefaces">
+        <item name="centurySchoolbook">Century Schoolbook</item>
+        <item name="comfortaa">Comfortaa</item>
+        <item name="courierNew">Courier New</item>
+        <item name="jura">Jura</item>
+        <item name="lobster">Lobster</item>
+        <item name="mythos">Mythos</item>
+        <item name="reliqExtraActive">Reliq ExtraActive</item>
+        <item name="philosopher">Philosopher</item>
+    </string-array>
+    <string-array name="typefaceFiles">
+        <item name="centurySchoolbook">CENSCBK.TTF</item>
+        <item name="comfortaa">Comfortaa-Regular.ttf</item>
+        <item name="courierNew">cour.ttf</item>
+        <item name="jura">Jura-Regular.ttf</item>
+        <item name="lobster">Lobster-Regular.ttf</item>
+        <item name="mythos">MythosStd.otf</item>
+        <item name="reliqExtraActive">ReliqStd-ExtraActive.otf</item>
+        <item name="philosopher">Philosopher-Regular.ttf</item>
+    </string-array>
+    <string-array name="typefacesEXT">
+        <item name="centurySchoolbook">Century Schoolbook</item>
+        <item name="comfortaa">Comfortaa</item>
+        <item name="courierNew">Courier New</item>
+        <item name="jura">Jura</item>
+        <item name="lobster">Lobster</item>
+        <item name="philosopher">Philosopher</item>
+    </string-array>
+    <string-array name="typefaceFilesEXT">
+        <item name="centurySchoolbook">CENSCBK.TTF</item>
+        <item name="comfortaa">Comfortaa-Regular.ttf</item>
+        <item name="courierNew">cour.ttf</item>
+        <item name="jura">Jura-Regular.ttf</item>
+        <item name="lobster">Lobster-Regular.ttf</item>
+        <item name="philosopher">Philosopher-Regular.ttf</item>
+    </string-array>
+    <string-array name="typefacesCR">
+        <item name="centurySchoolbook">Century Schoolbook</item>
+        <item name="comfortaa">Comfortaa</item>
+        <item name="courierNew">Courier New</item>
+        <item name="jura">Jura</item>
+        <item name="lobster">Lobster</item>
+        <item name="philosopher">Philosopher</item>
+    </string-array>
+    <string-array name="typefaceFilesCR">
+        <item name="centurySchoolbook">CENSCBK.TTF</item>
+        <item name="comfortaa">Comfortaa-Regular.ttf</item>
+        <item name="courierNew">cour.ttf</item>
+        <item name="jura">Jura-Regular.ttf</item>
+        <item name="lobster">Lobster-Regular.ttf</item>
+        <item name="philosopher">Philosopher-Regular.ttf</item>
+    </string-array>
+    <string-array name="typefacesDV">
+        <item name="adobeDevanagari">अडोबी देवनागरी</item>
+    </string-array>
+    <string-array name="typefaceFilesDV">
+        <item name="adobeDevanagari">AdobeDevanagari-Regular.otf</item>
+    </string-array>
+    <string-array name="typefacesEL">
+        <item name="centurySchoolbook">Century Schoolbook</item>
+        <item name="comfortaa">Comfortaa</item>
+        <item name="courierNew">Courier New</item>
+        <item name="jura">Jura</item>
+    </string-array>
+    <string-array name="typefaceFilesEL">
+        <item name="centurySchoolbook">CENSCBK.TTF</item>
+        <item name="comfortaa">Comfortaa-Regular.ttf</item>
+        <item name="courierNew">cour.ttf</item>
+        <item name="jura">Jura-Regular.ttf</item>
+    </string-array>
+    <string-array name="typefacesJA">
+        <item name="kozukaGothicPro">小塚ゴシック</item>
+        <item name="kozukaMinchoPro">小塚明朝</item>
+    </string-array>
+    <string-array name="typefaceFilesJA">
+        <item name="kozukaGothicPro">KozGoPro-Heavy.otf</item>
+        <item name="kozukaMinchoPro">KozMinPro-Heavy.otf</item>
+    </string-array>
+    <string-array name="typefacesZH">
+        <item name="ShuoWen">說文標篆體</item>
+    </string-array>
+    <string-array name="typefaceFilesZH">
+        <item name="ShuoWen">ShuoWen_1.ttf</item>
+    </string-array>
+    <string name="latin">Latin</string>
+    <string name="latinExt">Latin Extended-A</string>
+    <string name="cyrillic">Cyrillic</string>
+    <string name="greek">Greek</string>
+    <string name="devanagari">Devanagari</string>
+    <string name="japanese">Japanese</string>
+    <string name="chinese">Chinese (standard)</string>
+    <!--for typefaces, consider using database-->
+    <!--BREAK-->
+    <string name="pattern">Pattern</string>
+    <string name="app_name">Project Platypus</string>
+    <string name="action_settings">Settings</string>
+    <string name="changelogTitle">Changelog</string>
+    <string name="versionTitle">Version</string>
+    <string name="publishDateTitle">Publish date</string>
+    <string name="langUnavailableYetL">L</string>
+    <string name="langUnavailableYetM">M</string>
+    <string name="langUnavailableYetR">R</string>
+    <string name="gplv3">本程式是自由與開源碼軟件，按GNUv3(GNU通用公共授權條款第三版)授權用戶使用。\n\n條款全文：</string>
+    <string name="gplv3url">http://www.gnu.org/licenses/gpl-3.0.en.html</string>
+    <string name="noEasterEggs0">本程式沒有任何復活節彩蛋。</string>
+    <string name="noEasterEggs1">本程式真的沒有任何復活節彩蛋。</string>
+    <string name="noEasterEggs2">要說多少遍，本程式真的，真的沒有任何復活節彩蛋！</string>
+    <string name="noEasterEggs3">好，你贏了。</string>
+    <string name="logcatTitle">錯誤報告</string>
+    <string name="logcatMessage">對不起，程式發生錯誤。以下是偵錯訊息：</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_section1">Advocaat</string>
+    <string name="title_section2">Baileys Irish Cream</string>
+    <string name="title_section3">Curaçao</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Snackbar</string>
+    <string name="ringtone_test">Test the sound</string>
+    <string name="curacao"><b>Curaçao</b> (/\'kjʊərəsaʊ/ <i>KEWR-ə-sow</i>) is a liqueur flavored with the dried peel of the laraha citrus fruit, grown on the island of Curaçao. A non-native plant similar to an orange, the laraha developed from the sweet Valencia orange transplanted by Spanish explorers. The nutrient-poor soil and arid climate of Curaçao proved unsuitable to Valencia cultivation, resulting in small, bitter fruit of the trees. Although the bitter flesh of the Laraha is all but inedible, the peels are aromatic and flavorful, maintaining much of the essence of the Valencia orange.\n\nCuraçao liqueur was first developed and marketed by the Senior family in the 19th century. To create the liqueur the laraha peel is dried, bringing out the sweetly fragranced oils. After soaking in a still with alcohol and water for several days, the peel is removed and other spices are added. The liqueur has an orange-like flavor with varying degrees of bitterness. It is naturally colorless, but is often given artificial coloring, most commonly blue or orange, which confers an exotic appearance to cocktails and other mixed drinks. Blue color is achieved by adding a food colorant, most often E133 Brilliant Blue.</string>
+</resources>

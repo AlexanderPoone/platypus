@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.mynetgear.dord.platypus.LocalePrefs />
+    <RingtonePreference
+        android:summary="Ringtones by Google, not CyanogenMod!"
+        android:title="Test the sound" />
+    <Preference
+        android:selectable="false"
+        android:summary="α 0.314 (Schwarzwälder Kirschtorte)"
+        android:title="@string/versionTitle" />
+    <Preference
+        android:enabled="false"
+        android:title="@string/changelogTitle" />
+</PreferenceScreen>

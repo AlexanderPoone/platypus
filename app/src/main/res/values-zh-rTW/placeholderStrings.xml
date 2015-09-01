@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="helloWorld">世界，你好！</string>
+    <string name="loremHeader">Lorem Ipsum</string>
+    <string name="loremHeaderQuesion">Quid Novi?</string>
+    <string name="loremContent0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="loremContent1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="loremContent2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="loremContent3">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="fontTestPangram">岱宗夫如何？齊魯青未了。造化鐘神秀，陰陽割昏曉。盪胸生層雲，決眥入歸鳥。會當凌絕頂，一覽眾山小。</string>
+    <string name="fontTestAlt">All work and no play makes Jack a dull boy.</string>
+</resources>

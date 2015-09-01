@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font">Police</string>
+    <string name="app_name">Project Platypus</string>
+    <string name="pattern">Patron</string>
+    <string name="hello_world">Bonjour, monde!</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="changelogTitle">Changelog</string>
+    <string name="versionTitle">Version</string>
+    <string name="cancel">Cancel</string>
+</resources>

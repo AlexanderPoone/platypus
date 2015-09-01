@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="locale">Lingvo</string>
+    <string-array name="locale_native">
+        <item name="en_GB">English (United Kingdom)</item>
+        <item name="en_US">English (United States)</item>
+        <item name="ca">Català</item>
+        <item name="de_DE">Deutsch (Deutschland)</item>
+        <item name="el">Ελληνικά</item>
+        <item name="es_ES">Español (España)</item>
+        <item name="es_MX">Español (México)</item>
+        <item name="eo">Esperanto</item>
+        <item name="fr_FR">Français (France)</item>
+        <item name="hax0r">31337 h4x0r</item>
+        <item name="ja">日本語</item>
+        <item name="ua">Українська</item>
+        <item name="zh_HK">中文 (香港正體)</item>
+        <item name="zh_TW">中文 (臺灣正體)</item>
+    </string-array>
+    <string-array name="locale">
+        <item name="en_GB">英語 (英國)</item>
+        <item name="en_US">英語 (美國)</item>
+        <item name="ca">加泰隆尼亞語</item>
+        <item name="de_DE">德語 (德國)</item>
+        <item name="el">希臘語</item>
+        <item name="es_ES">西班牙語 (西班牙)</item>
+        <item name="es_MX">西班牙語 (墨西哥)</item>
+        <item name="eo">世界語</item>
+        <item name="fr_FR">法語 (法國)</item>
+        <item name="hax0r">黑客語</item>
+        <item name="ja">日語</item>
+        <item name="ua">烏克蘭語</item>
+        <item name="zh_HK">中文 (香港正體)</item>
+        <item name="zh_TW">中文 (臺灣正體)</item>
+    </string-array>
+</resources>

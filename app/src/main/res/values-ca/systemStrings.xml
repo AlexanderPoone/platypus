@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font">Fort</string> <!-- Yes, the Catalan of font is "font". -->
+    <string name="action_settings">Preferències</string>
+    <string name="changelogTitle">Changelog</string>
+    <string name="versionTitle">Versió</string>
+    <string name="pattern">Patró</string>
+</resources>

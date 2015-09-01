@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="font">Schriftart</string>
+    <string name="app_name">Projekt Schnabeltier</string>
+    <string name="pattern">Muster</string>
+    <string name="hello_world">Hallo Welt!</string>
+    <string name="action_settings">Einstelllungen</string>
+    <string name="changelogTitle">Änderungsprotokoll</string>
+    <string name="versionTitle">Version</string>
+    <string name="cancel">Cancel</string>
+</resources>
