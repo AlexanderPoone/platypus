@@ -2,17 +2,12 @@ package com.mynetgear.dord.platypus;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.PorterDuff;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 //import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.TextView;
 
 public class FontArrayAdapter extends ArrayAdapter<String> {
 
@@ -35,7 +30,7 @@ public class FontArrayAdapter extends ArrayAdapter<String> {
 
     public View getCustomView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = activity.getLayoutInflater();
-        View row = inflater.inflate(R.layout.fontlayout, parent, false);
+        View row = inflater.inflate(R.layout.old_layout_font_dialog, parent, false);
 //        RadioButton radioButton=(RadioButton) row.findViewById(R.id.typRadio);
         String[] typefaceFiles=activity.getResources().getStringArray(R.array.typefaceFiles);
         String[] typefaceNames=activity.getResources().getStringArray(R.array.typefaces);

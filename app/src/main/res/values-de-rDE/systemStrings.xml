@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="font">Schriftart</string>
+    <string name="charset">Zeichensatz</string>
+    <string name="latin">Lateinisch</string>
+    <string name="latinExt">Lateinisch, erweitert-A</string>
+    <string name="cyrillic">Kyrillisch</string>
+    <string name="greek">Griechisch</string>
+    <string name="devanagari">Devanagari</string>
+    <string name="japanese">Japonès</string>
+    <string name="chinese">Chinesisch</string>
     <string name="app_name">Projekt Schnabeltier</string>
     <string name="pattern">Muster</string>
     <string name="hello_world">Hallo Welt!</string>
@@ -8,4 +16,7 @@
     <string name="changelogTitle">Änderungsprotokoll</string>
     <string name="versionTitle">Version</string>
     <string name="cancel">Cancel</string>
+    <string name="title_section1">Eierlikör</string>
+    <string name="title_section2">Irischer Cremelikör</string>
+    <string name="title_section3">Curaçao-Likör</string>
 </resources>

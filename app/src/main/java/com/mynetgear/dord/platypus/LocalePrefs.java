@@ -1,17 +1,13 @@
 package com.mynetgear.dord.platypus;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.preference.DialogPreference;
 import android.preference.PreferenceScreen;
-import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +52,7 @@ public class LocalePrefs extends DialogPreference {
             String[] supTxt = getContext().getResources().getStringArray(R.array.locale_native);
             String[] subTxt = getContext().getResources().getStringArray(R.array.locale);
             LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row = inflater.inflate(R.layout.listdialog, parent, false);
+            View row = inflater.inflate(R.layout.old_layout_prefs_lang, parent, false);
             ImageView icon = (ImageView) row.findViewById(R.id.flagHolder);
             final Locale selectedLocale;
             Typeface vt = Typeface.createFromAsset(getContext().getAssets(), "fonts/VT323.ttf");

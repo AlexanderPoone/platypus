@@ -28,11 +28,11 @@
         android:layout_height="match_parent"
         android:layout_below="@id/tiradeView" />
 
-    <!--map:cameraTargetLat="12.118794"-->
-    <!--map:cameraTargetLng="-68.966500"-->
-    <!--map:cameraZoom="8"-->
-    <!--map:mapType="terrain"-->
-    <!--map:uiTiltGestures="false"-->
-    <!--map:uiScrollGestures="false"-->
+    <!--old_layout_buccaneers:cameraTargetLat="12.118794"-->
+    <!--old_layout_buccaneers:cameraTargetLng="-68.966500"-->
+    <!--old_layout_buccaneers:cameraZoom="8"-->
+    <!--old_layout_buccaneers:mapType="terrain"-->
+    <!--old_layout_buccaneers:uiTiltGestures="false"-->
+    <!--old_layout_buccaneers:uiScrollGestures="false"-->
 
 </RelativeLayout>

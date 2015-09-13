@@ -18,19 +18,19 @@
         <item name="zh_TW">中文 (臺灣正體)</item>
     </string-array>
     <string-array name="locale">
-        <item name="en_GB">英語 (英國)</item>
-        <item name="en_US">英語 (美國)</item>
-        <item name="ca">加泰隆尼亞語</item>
-        <item name="de_DE">德語 (德國)</item>
-        <item name="el">希臘語</item>
-        <item name="es_ES">西班牙語 (西班牙)</item>
-        <item name="es_MX">西班牙語 (墨西哥)</item>
-        <item name="eo">世界語</item>
-        <item name="fr_FR">法語 (法國)</item>
-        <item name="hax0r">黑客語</item>
-        <item name="ja">日語</item>
-        <item name="ua">烏克蘭語</item>
-        <item name="zh_HK">中文 (香港正體)</item>
-        <item name="zh_TW">中文 (臺灣正體)</item>
+        <item name="en_GB">Angla (Unuiĝinta Reĝlando)</item>
+        <item name="en_US">Angla (Usono)</item>
+        <item name="ca">Kataluna</item>
+        <item name="de_DE">Germana (Germanio)</item>
+        <item name="el">Greka</item>
+        <item name="es_ES">Hispana (Hispanio)</item>
+        <item name="es_MX">Hispana (Meksiko)</item>
+        <item name="eo">Esperanto</item>
+        <item name="fr_FR">Franca (Francio)</item>
+        <item name="hax0r">Leet</item>
+        <item name="ja">Japana</item>
+        <item name="ua">Ukraina</item>
+        <item name="zh_HK">Ĉina (Honkongo)</item>
+        <item name="zh_TW">Ĉina (Tajvano)</item>
     </string-array>
 </resources>

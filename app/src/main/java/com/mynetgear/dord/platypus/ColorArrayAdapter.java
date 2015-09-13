@@ -9,7 +9,6 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -36,7 +35,7 @@ public class ColorArrayAdapter extends ArrayAdapter<String> {
 
     public View getCustomView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = activity.getLayoutInflater();
-        View row = inflater.inflate(R.layout.colorlayout, parent, false);
+        View row = inflater.inflate(R.layout.old_layout_color_dialog, parent, false);
 
         String[] hues = activity.getResources().getStringArray(R.array.colours);
         String[] x11 = activity.getResources().getStringArray(R.array.x11colors);

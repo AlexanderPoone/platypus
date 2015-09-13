@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.old_layout_main);
         overridePendingTransition(R.anim.transition_startnew, R.anim.transition_pausemain);
         CreateMpThread createMpThread = new CreateMpThread();
         createMpThread.start();
@@ -198,7 +198,7 @@ public class MainActivity extends Activity {
         public View getCustomView(int position, View convertView, ViewGroup parent) {
 
             LayoutInflater inflater = getLayoutInflater();
-            View row = inflater.inflate(R.layout.colorlayout, parent, false);
+            View row = inflater.inflate(R.layout.old_layout_color_dialog, parent, false);
 
             String[] hues = getResources().getStringArray(R.array.colours);
             int[] code = getResources().getIntArray(R.array.colorSystem);
@@ -284,7 +284,7 @@ public class MainActivity extends Activity {
 //            String[] supTxt = getResources().getStringArray(R.array.locale_native);
 //            String[] subTxt = getResources().getStringArray(R.array.locale);
 //            LayoutInflater inflater = getLayoutInflater();
-//            View row = inflater.inflate(R.layout.listdialog, parent, false);
+//            View row = inflater.inflate(R.layout.old_layout_prefs_lang, parent, false);
 //
 //            ImageView icon = (ImageView) row.findViewById(R.id.flagHolder);
 //            Locale locale;
@@ -361,7 +361,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.old_menu_main, menu);
         return true;
     }
 

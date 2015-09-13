@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="font">Fort</string> <!-- Yes, the Catalan of font is "font". -->
+    <string name="font">Fort</string>
+    <!-- Yes, the Catalan of font is "font". -->
+    <string name="cyrillic">Ciríl·lic</string>
+    <string name="devanagari">Devanagari</string>
+    <string name="japanese">Japonès</string>
     <string name="action_settings">Preferències</string>
     <string name="changelogTitle">Changelog</string>
     <string name="versionTitle">Versió</string>
     <string name="pattern">Patró</string>
+    <string name="title_section1">Advocaat</string>
+    <string name="title_section2">Baileys Irish Cream</string>
+    <string name="title_section3">Curaçao</string>
 </resources>

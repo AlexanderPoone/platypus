@@ -10,7 +10,6 @@ import android.app.FragmentManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 //import android.content.Context;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -21,7 +20,7 @@ import android.graphics.Shader;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import android.media.Image;
+//import android.media.Image;
 import android.media.MediaPlayer;
 //import android.os.Build;
 import android.os.Bundle;
@@ -38,14 +37,14 @@ import android.support.v4.widget.DrawerLayout;
 //import android.widget.ArrayAdapter;
 //import android.widget.ImageButton;
 import android.widget.Button;
-import android.widget.FrameLayout;
+//import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListAdapter;
+//import android.widget.LinearLayout;
+//import android.widget.ListAdapter;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.google.android.gms.analytics.GoogleAnalytics;
+//import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -58,8 +57,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 //import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 import com.mynetgear.dord.platypus.db.DBDataSource;
-
-import org.w3c.dom.Text;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -336,6 +333,17 @@ public class Atrium extends Activity
             }
         }
 
+        public class PatternCloudsSvgThread extends Thread {
+            public PatternCloudsSvgThread() {
+                super();
+            }
+
+            @Override
+            public void run() {
+                super.run();
+            }
+        }
+
         public class PatternCloudsThread extends Thread {
             private View rootView;
 
@@ -411,7 +419,7 @@ public class Atrium extends Activity
                 });
                 //
                 Button anotherButton = (Button) rootView.findViewById(R.id.spinButt);
-                final FontLinearLayout daLayout = new FontLinearLayout(new ContextThemeWrapper(getActivity(), R.style.Bear_Light));
+                final FontLinearLayout daLayout = new FontLinearLayout(new ContextThemeWrapper(getActivity(), R.style.PeriodoAzul_Light));
                 AlertDialog.Builder anotherBuilder = new AlertDialog.Builder(new ContextThemeWrapper(getActivity(), android.R.style.Theme_Material_Light_Dialog));
                 anotherBuilder.setView(daLayout)
                         .setTitle(R.string.font)
@@ -448,7 +456,7 @@ public class Atrium extends Activity
         }
 
         public View typeTwo(LayoutInflater inflater, ViewGroup container) {
-            View rootView = inflater.inflate(R.layout.activity_main, container, false);
+            View rootView = inflater.inflate(R.layout.layout_font_test, container, false);
             PatternCloudsThread patternThread = new PatternCloudsThread(rootView);
             TypeTwoThread typeTwoThread = new TypeTwoThread(rootView);
             StartNotificationThread startNotificationThread = new StartNotificationThread();
@@ -469,7 +477,7 @@ public class Atrium extends Activity
         }
 
         public View typeThree(LayoutInflater inflater, ViewGroup container) {
-            final View rootView = inflater.inflate(R.layout.map, container, false);
+            final View rootView = inflater.inflate(R.layout.old_layout_buccaneers, container, false);
             MapFragment mapFragment = (MapFragment) getChildFragmentManager().findFragmentById(R.id.map);
             mMap = mapFragment.getMap();
             CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(CENTRE_LAT_LANG, 0.2f);
@@ -503,7 +511,7 @@ public class Atrium extends Activity
 //                            Log.i("Lat", Double.toString(marker.getPosition().latitude));
 //                            Log.i("Lng", Double.toString(marker.getPosition().longitude));
                     ArrayList<Object> details = dbDataSource.findOthersFromLatLng(marker.getPosition().latitude, marker.getPosition().longitude);
-                    View v = getActivity().getLayoutInflater().inflate(R.layout.snippet, null);
+                    View v = getActivity().getLayoutInflater().inflate(R.layout.old_layout_buccaneers_snippet, null);
                     TextView plcName = (TextView) v.findViewById(R.id.placeName);
                     plcName.setText((String) details.get(0));
                     TextView plcCity = (TextView) v.findViewById(R.id.placeOwner);

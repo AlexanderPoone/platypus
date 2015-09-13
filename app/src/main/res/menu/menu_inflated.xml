@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@mipmap/ic_settings_white_24dp"
+        android:orderInCategory="0"
+        app:showAsAction="ifRoom"
+        android:title="@string/action_settings" />
+    <item
+        android:id="@+id/lang_settings"
+        android:icon="@mipmap/ic_translate_white_24dp"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:title="@string/locale" />
+    <item
+        android:id="@+id/snackbar_action"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="@android:string/unknownName" />
+</menu>
