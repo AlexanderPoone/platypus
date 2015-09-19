@@ -26,16 +26,16 @@ public class LocalePrefs extends DialogPreference {
 
 
     private SharedPreferences sharedPreferences;
+    private PreferenceScreen gotPreferenceScreen;
+    private Context activityAsContext;
     private static final String SHAREDPREFS_NAME = "settings";
     private static final String SHAREDPREFS_LOCALE = "LOCALE";
 
     public LocalePrefs(Context context) {
         super(context);
+        activityAsContext = context;
         setTitle(context.getString(R.string.locale)); //Title of the PREFERENCE, NOT dialog!
     }
-
-
-    private PreferenceScreen gotPreferenceScreen;
 
     public void setGotPreferenceScreen(PreferenceScreen theScreen) {
         gotPreferenceScreen = theScreen;
@@ -49,13 +49,13 @@ public class LocalePrefs extends DialogPreference {
 
         @Override
         public View getView(final int position, View convertView, final ViewGroup parent) {
-            String[] supTxt = getContext().getResources().getStringArray(R.array.locale_native);
-            String[] subTxt = getContext().getResources().getStringArray(R.array.locale);
-            LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            String[] supTxt = activityAsContext.getResources().getStringArray(R.array.locale_native);
+            String[] subTxt = activityAsContext.getResources().getStringArray(R.array.locale);
+            LayoutInflater inflater = (LayoutInflater) activityAsContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             View row = inflater.inflate(R.layout.old_layout_prefs_lang, parent, false);
             ImageView icon = (ImageView) row.findViewById(R.id.flagHolder);
             final Locale selectedLocale;
-            Typeface vt = Typeface.createFromAsset(getContext().getAssets(), "fonts/VT323.ttf");
+            Typeface vt = Typeface.createFromAsset(activityAsContext.getAssets(), "fonts/VT323.ttf");
             TextView label = (TextView) row.findViewById(R.id.langTxt0);
             switch (position) {
                 case 0:
@@ -109,17 +109,17 @@ public class LocalePrefs extends DialogPreference {
             label.setText(supTxt[position]);
             TextView subLabel = (TextView) row.findViewById(R.id.langTxt1);
             subLabel.setText(subTxt[position]);
-//            int Auber = getContext().getResources().getColor(R.color.Aubergine);
-//            int Ubu = getContext().getResources().getColor(R.color.UbuntuOrange);
+//            int Auber = activityAsContext.getResources().getColor(R.color.Aubergine);
+//            int Ubu = activityAsContext.getResources().getColor(R.color.UbuntuOrange);
             if (position % 2 == 0) {
-                row.setBackgroundColor(getContext().getResources().getColor(R.color.Aubergine));
+                row.setBackgroundColor(activityAsContext.getResources().getColor(R.color.Aubergine));
             } else {
-                row.setBackgroundColor(getContext().getResources().getColor(R.color.UbuntuOrange));
+                row.setBackgroundColor(activityAsContext.getResources().getColor(R.color.UbuntuOrange));
             }
             row.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    sharedPreferences = getContext().getSharedPreferences(SHAREDPREFS_NAME, getContext().MODE_PRIVATE);
+                    sharedPreferences = activityAsContext.getSharedPreferences(SHAREDPREFS_NAME, Context.MODE_PRIVATE); //activityAsContext.MODE_PRIVATE?
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     switch (position) {
                         case 0:
@@ -185,24 +185,24 @@ public class LocalePrefs extends DialogPreference {
                         Configuration config = new Configuration();
                         config.setLocale(myLocale);
                         config.locale = myLocale;
-                        getContext().getResources().updateConfiguration(config, getContext().getResources().getDisplayMetrics());
+                        activityAsContext.getResources().updateConfiguration(config, activityAsContext.getResources().getDisplayMetrics());
                     }
-                    gotPreferenceScreen.getPreference(0).setTitle(getContext().getString(R.string.locale));
-                    gotPreferenceScreen.getPreference(1).setTitle(getContext().getString(R.string.fontTestPangram));
-                    gotPreferenceScreen.getPreference(2).setTitle(getContext().getString(R.string.versionTitle));
-                    gotPreferenceScreen.getPreference(3).setTitle(getContext().getString(R.string.changelogTitle));
-                    ((Activity) getContext()).setTitle(R.string.action_settings);
-//                    gotPreferenceScreen.getPreference(0).setTitle(getContext().getString(R.string.fontTestPangram));
-//                    gotPreferenceScreen.getPreference(1).setTitle(getContext().getString(R.string.fontTestPangram));
-//                    gotPreferenceScreen.getPreference(2).setTitle(getContext().getString(R.string.fontTestPangram));
-//                    gotPreferenceScreen.getPreference(3).setTitle(getContext().getString(R.string.fontTestPangram));
-                    ((DialogPreference) gotPreferenceScreen.getPreference(0)).setDialogTitle(getContext().getString(R.string.locale));
-                    ((DialogPreference) gotPreferenceScreen.getPreference(0)).setNegativeButtonText(getContext().getString(android.R.string.cancel));
+                    gotPreferenceScreen.getPreference(0).setTitle(activityAsContext.getString(R.string.locale));
+                    gotPreferenceScreen.getPreference(1).setTitle(activityAsContext.getString(R.string.fontTestPangram));
+                    gotPreferenceScreen.getPreference(2).setTitle(activityAsContext.getString(R.string.versionTitle));
+                    gotPreferenceScreen.getPreference(3).setTitle(activityAsContext.getString(R.string.changelogTitle));
+                    ((Activity) activityAsContext).setTitle(R.string.action_settings);
+//                    gotPreferenceScreen.getPreference(0).setTitle(activityAsContext.getString(R.string.fontTestPangram));
+//                    gotPreferenceScreen.getPreference(1).setTitle(activityAsContext.getString(R.string.fontTestPangram));
+//                    gotPreferenceScreen.getPreference(2).setTitle(activityAsContext.getString(R.string.fontTestPangram));
+//                    gotPreferenceScreen.getPreference(3).setTitle(activityAsContext.getString(R.string.fontTestPangram));
+                    ((DialogPreference) gotPreferenceScreen.getPreference(0)).setDialogTitle(activityAsContext.getString(R.string.locale));
+                    ((DialogPreference) gotPreferenceScreen.getPreference(0)).setNegativeButtonText(activityAsContext.getString(android.R.string.cancel));
                     getDialog().dismiss();
 //                    Locale.setDefault(selectedLocale);
 //                    Configuration config = new Configuration();
 //                    config.locale = selectedLoccale;
-//                    getContext().getResources().updateConfiguration(config, getContext().getResources().getDisplayMetrics());
+//                    activityAsContext.getResources().updateConfiguration(config, activityAsContext.getResources().getDisplayMetrics());
                 }
 
             });
@@ -213,8 +213,8 @@ public class LocalePrefs extends DialogPreference {
 //    @Override
 //    protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
 //        super.onPrepareDialogBuilder(builder);
-//        builder.setTitle(getContext().getString(R.string.locale));
-//        builder.setNegativeButton(getContext().getString(R.string.cancel), null);
+//        builder.setTitle(activityAsContext.getString(R.string.locale));
+//        builder.setNegativeButton(activityAsContext.getString(R.string.cancel), null);
 //        builder.setCancelable(false);
 //    }
     }
@@ -222,13 +222,13 @@ public class LocalePrefs extends DialogPreference {
     @Override
     protected void onPrepareDialogBuilder(AlertDialog.Builder builder) {
         //super.onPrepareDialogBuilder(builder);
-        String[] supTxt = getContext().getResources().getStringArray(R.array.locale_native);
-        LocAdapter locAdapter = new LocAdapter(getContext(), android.R.layout.simple_spinner_item, supTxt);
+        String[] supTxt = activityAsContext.getResources().getStringArray(R.array.locale_native);
+        LocAdapter locAdapter = new LocAdapter(activityAsContext, android.R.layout.simple_spinner_item, supTxt);
         builder.setAdapter(locAdapter, null);
-        builder.setIcon(getContext().getDrawable(R.mipmap.ic_translate_white_24dp));
-        builder.setTitle(getContext().getString(R.string.locale)); //Title of the DIALOG, NOT Preference!
+        builder.setIcon(activityAsContext.getDrawable(R.mipmap.ic_translate_white_24dp));
+        builder.setTitle(activityAsContext.getString(R.string.locale)); //Title of the DIALOG, NOT Preference!
         builder.setPositiveButton(null, null);
-        //builder.setNegativeButton(getContext().getString(R.string.cancel), null);
+        //builder.setNegativeButton(activityAsContext.getString(R.string.cancel), null);
         builder.setCancelable(false);
     }
 

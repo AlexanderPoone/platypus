@@ -1,4 +1,4 @@
-package com.mynetgear.dord.platypus;
+package com.mynetgear.dord.platypus.v22;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,6 +6,8 @@ import android.graphics.Movie;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+
+import com.mynetgear.dord.platypus.R;
 
 import java.io.InputStream;
 

@@ -1,5 +1,8 @@
 package com.mynetgear.dord.platypus;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -7,19 +10,18 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Adapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Alexandre Poon on 15.09.03.
@@ -27,10 +29,16 @@ import java.util.List;
 public class ActivityNeue extends AppCompatActivity {
 
     private DrawerLayout mDrawerLayout;
+    private SharedPreferences sharedPreferences;
+    private static final String SHAREDPREFS_NAME = "settings";
+    private static final String SHAREDPREFS_LOCALE = "LOCALE";
+    private static final String DEFAULT_LOCALE = "en_UK";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPreferences = getSharedPreferences(SHAREDPREFS_NAME, MODE_PRIVATE);
+        updateLocale();
         setContentView(R.layout.layout_main);
         setSupportActionBar((Toolbar) findViewById(R.id.support_toolbar));
         ActionBar actionBar = getSupportActionBar();
@@ -40,11 +48,30 @@ public class ActivityNeue extends AppCompatActivity {
         NavigationView navigationView = (NavigationView) findViewById(R.id.drawer_view_new);
         setupDrawerContent(navigationView);
 
+        updateComponents();
+    }
 
+    private void updateLocale() {
+        String localCode = sharedPreferences.getString(SHAREDPREFS_LOCALE, DEFAULT_LOCALE);
+        Locale myLocale;
+        if (localCode.length() > 2) {
+            myLocale = new Locale(localCode.substring(0, 2), localCode.substring(3));
+        } else {
+            myLocale = new Locale(localCode);
+        }
+        Locale.setDefault(myLocale);
+        Configuration config = new Configuration();
+        config.setLocale(myLocale);
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    }
+
+    private void updateComponents() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-
+        if (viewPager != null) {
+            setPagerAdapter(viewPager);
+        }
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-//        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     @Override
@@ -59,23 +86,49 @@ public class ActivityNeue extends AppCompatActivity {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
+            case R.id.action_settings:
+                Intent intent = new Intent(this, ActivityPrefs.class);
+                startActivity(intent);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void setPageAdapter(ViewPager viewPager) {
-        FragmentPagerAdapter pagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return null;
-            }
+    static class CustomFragmentPagerAdapter extends FragmentPagerAdapter {
+        private final List<Fragment> mFragments = new ArrayList<>();
+        private final List<String> mFragmentTitles = new ArrayList<>();
 
-            @Override
-            public int getCount() {
-                return 0;
-            }
-        };
-        viewPager.setAdapter(pagerAdapter);
+        public CustomFragmentPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        public void addFragment(Fragment fragment, String title) {
+            mFragments.add(fragment);
+            mFragmentTitles.add(title);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragments.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragments.size();
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return mFragmentTitles.get(position);
+        }
+    }
+
+    private void setPagerAdapter(ViewPager viewPager) {
+        CustomFragmentPagerAdapter customFPA = new CustomFragmentPagerAdapter(getSupportFragmentManager());
+        customFPA.addFragment(new DesignFragment(), "Pomp");
+        customFPA.addFragment(new CocktailMapFragment(), "Map");
+        customFPA.addFragment(new CocktailMapFragment(), "Recycler");
+        viewPager.setAdapter(customFPA);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {

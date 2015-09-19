@@ -1,4 +1,4 @@
-package com.mynetgear.dord.platypus;
+package com.mynetgear.dord.platypus.v22;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,6 +24,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+
+import com.mynetgear.dord.platypus.ActivityPrefs;
+import com.mynetgear.dord.platypus.R;
 
 import org.apache.commons.math3.fraction.Fraction;
 import org.apache.commons.math3.util.Precision;
@@ -374,7 +377,7 @@ public class MainActivity extends Activity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             Log.i(getString(android.R.string.copy), "wow");
-            Intent intent = new Intent(this, PrefsClass.class);
+            Intent intent = new Intent(this, ActivityPrefs.class);
             startActivity(intent);
             return true;
         }

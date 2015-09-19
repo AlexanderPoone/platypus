@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.mynetgear.dord.platypus.R;
+
 public class ColorArrayAdapter extends ArrayAdapter<String> {
 
     private Activity activity;

@@ -1,4 +1,4 @@
-package com.mynetgear.dord.platypus;
+package com.mynetgear.dord.platypus.v22;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+
+import com.mynetgear.dord.platypus.R;
 
 public class FontArrayAdapter extends ArrayAdapter<String> {
 

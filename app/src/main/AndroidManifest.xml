@@ -32,11 +32,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Atrium"
+            android:name=".v22.Atrium"
             android:label="@string/app_name"
             android:theme="@style/PeriodoAzul" />
         <activity
-            android:name=".PrefsClass"
+            android:name=".ActivityPrefs"
             android:label="@string/action_settings"
             android:theme="@style/Gurkha" />
 

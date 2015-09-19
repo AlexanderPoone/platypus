@@ -1,30 +1,17 @@
 package com.mynetgear.dord.platypus;
 
-import android.app.ActionBar;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.RingtonePreference;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import java.util.Locale;
 
 /**
  * Created by Alexandre Poon on 15.08.11.
  */
-public class PrefsClass extends PreferenceActivity {
+public class ActivityPrefs extends PreferenceActivity {
 
     static Context context;
 
@@ -68,7 +55,7 @@ public class PrefsClass extends PreferenceActivity {
             Preference appVersion = new Preference(context);
             appVersion.setTitle(context.getString(R.string.versionTitle));
             appVersion.setSummary("α 0.314 (Schwarzwälder Kirschtorte)");
-            appVersion.setSelectable(false);
+            appVersion.setEnabled(false);
             mainScreen.addPreference(appVersion);
             Preference showChangelog = new Preference(context);
             showChangelog.setTitle(context.getString(R.string.changelogTitle));

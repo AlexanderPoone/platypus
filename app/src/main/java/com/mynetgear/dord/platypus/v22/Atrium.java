@@ -1,4 +1,4 @@
-package com.mynetgear.dord.platypus;
+package com.mynetgear.dord.platypus.v22;
 
 import android.app.Activity;
 
@@ -56,6 +56,11 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 //import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
+import com.mynetgear.dord.platypus.AnalyticsApplication;
+import com.mynetgear.dord.platypus.ColorArrayAdapter;
+import com.mynetgear.dord.platypus.FontLinearLayout;
+import com.mynetgear.dord.platypus.ActivityPrefs;
+import com.mynetgear.dord.platypus.R;
 import com.mynetgear.dord.platypus.db.DBDataSource;
 
 import java.io.File;
@@ -234,7 +239,7 @@ public class Atrium extends Activity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(this, PrefsClass.class);
+            Intent intent = new Intent(this, ActivityPrefs.class);
             startActivity(intent);
             return true;
         }

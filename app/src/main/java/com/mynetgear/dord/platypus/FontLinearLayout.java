@@ -15,6 +15,8 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.mynetgear.dord.platypus.R;
+
 import java.util.ArrayList;
 
 /**
