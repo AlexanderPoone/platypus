@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="helloWorld">Hello, world!</string>
+    <string name="helloWorld">¡Hola mundo!</string>
     <string name="loremHeader">Lorem Ipsum</string>
     <string name="loremHeaderQuesion">Quid Novi?</string>
     <string name="loremContent0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
